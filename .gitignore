@@ -1,5 +1,7 @@
 env/
 .DS_Store
 logs/
+ML_pipeline_project.egg-info/
 __pycache__/
 *.pyc
+mlproject/
