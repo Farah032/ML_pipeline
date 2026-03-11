@@ -16,13 +16,13 @@ def index():
         raise Exception("We are testing our custom exception")
         
     except Exception as e:
-        logging.exception("Exception occurred")
-        abc = CustomException(e, sys)
-        logging.error(abc.error_message)
-
+        #logging.exception("Exception occurred")
         #abc = CustomException(e, sys)
         #logging.error(abc.error_message)
-        #return "Welcome to ML pipeline"
+
+        abc = CustomException(e, sys)
+        logging.error(abc.error_message)
+        return "Welcome to ML pipeline"
 
 if __name__ == "__main__":
    # app.run(debug=True)

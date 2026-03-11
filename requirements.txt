@@ -1,4 +1,4 @@
-panda
+pandas
 flask
 numpy
 scikit-learn

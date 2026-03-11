@@ -5,15 +5,18 @@ from src.logger import logging
 from src.exception import CustomException
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import DataTransformation
 
 #decorator: A decorator is a design pattern in Python that allows you to modify the behavior of a function or class. It is denoted by the "@" symbol followed by the name of the decorator function. In this case, @dataclass is a decorator that automatically generates special methods for the class, such as __
 @dataclass
 class DataIngestionConfig:
-    train_data_path = os.path.join('artifacts', 'train.csv')
-    test_data_path = os.path.join('artifacts', 'test.csv')
-    raw_data_path = os.path.join('artifacts', 'raw.csv')
+    #it is a menu so we don't have to change everything just change path
+    train_data_path = os.path.join('artifacts/data_ingestion', 'train.csv')
+    test_data_path = os.path.join('artifacts/data_ingestion', 'test.csv')
+    raw_data_path = os.path.join('artifacts/data_ingestion', 'raw.csv')
 
 class DataIngestion:
+    #here the actual work done regarding to data
     def __init__(self):
         self.ingestion_config = DataIngestionConfig()
         
@@ -47,8 +50,16 @@ class DataIngestion:
 
 if __name__ == "__main__":
     obj = DataIngestion()
-    obj.initiate_data_ingestion()
+    #obj.initiate_data_ingestion()
+    train_data_path, test_data_path = obj.initiate_data_ingestion()
+    data_transformation = DataTransformation()
+    train_arr , test_arr ,_ = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
 
 
 #/Users/farahjabeen/Desktop/Project-Thesis/ML_pipeline/src/components/dataingestion.py
 #/Users/farahjabeen/Desktop/Project-Thesis/ML_pipeline/noteboook/data/income_cleandata.csv
+
+
+
+
+
