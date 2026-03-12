@@ -6,6 +6,7 @@ from src.exception import CustomException
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import DataTransformation
+from src.components.model_training import ModelTrainer
 
 #decorator: A decorator is a design pattern in Python that allows you to modify the behavior of a function or class. It is denoted by the "@" symbol followed by the name of the decorator function. In this case, @dataclass is a decorator that automatically generates special methods for the class, such as __
 @dataclass
@@ -54,6 +55,8 @@ if __name__ == "__main__":
     train_data_path, test_data_path = obj.initiate_data_ingestion()
     data_transformation = DataTransformation()
     train_arr , test_arr ,_ = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
 
 
 #/Users/farahjabeen/Desktop/Project-Thesis/ML_pipeline/src/components/dataingestion.py
