@@ -1,0 +1,43 @@
+pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .pandas
+flask
+numpy
+scikit-learn
+matplotlib
+seaborn
+-e .
